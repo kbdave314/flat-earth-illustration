@@ -1,4 +1,6 @@
-Visualizations of a "flat" Earth cosmology based on adding the obvious inertial forces. []
+Visualizations of a "flat" Earth cosmology based on adding the obvious inertial
+forces. For my [blog
+post](https://countingto.one/posts/2017-08-12-rehabilitating-a-flat-earth.html).
 
 Needs:
 
