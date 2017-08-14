@@ -1,0 +1,29 @@
+\documentclass[class=minimal,border=0pt,multi=tikzpicture,varwidth=false]{standalone}
+%\def\pgfsysdriver{pgfsys-dvisvgm.def}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{math}
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\pgfplotsset{width=12cm}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \begin{polaraxis}[
+      ultra thick,
+      xmin=-180,
+      xmax=180,
+      xticklabel=\empty,
+      ymin=0,
+      ymax=3.142,
+      ytick={0,1.571,3.142},
+      yticklabels={\empty,\empty,\empty},
+      y axis line style={opacity=0}
+    ]
+    \foreach \w in {-0.95,-0.85,...,0.95}
+      \addplot[domain=0:1,->] (
+        {atan(cos(deg(pi*\w))*tan(deg(x)))}
+      , {rad(acos(sin(deg(pi*\w))*sin(deg(x))))}
+      );
+  \end{polaraxis};
+\end{tikzpicture}
+\end{document}
